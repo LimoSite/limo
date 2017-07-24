@@ -4,14 +4,16 @@
       .col-md-12
         .frame
           = image_tag 'logo-limo.jpg', class:"logo-welcome"
+
         -#%header
           %h1.limo
             Limo
             .divide
             %small.sma
               Gutschein Journal
-        -#.btn-c
-          = link_to 'Schreiben Sie uns', new_contact_path, class:"btn btn-success"
+
+          
+          //= link_to 'Schreiben Sie uns', new_contact_path, class:"btn btn-success"
 = render 'st'
 %section#welcome-media
   .container-fluid#mediadaten
@@ -28,4 +30,7 @@
           Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in. Donec in blandit dolor. Vivamus a fringilla lorem, vel faucibus ante. Nunc ullamcorper, justo a iaculis elementum, enim orci viverra eros, fringilla porttitor lorem eros vel.
         .data
           <iframe width="100%" height="701px" src="https://www.yumpu.com/de/embed/view/vmG1N6HrlYVJyS59" frameborder="0" allowfullscreen="true"  allowtransparency="true"></iframe>
--#
+        .btn-c.text-center
+          <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.limo-journal.de&width=350&layout=standard&action=like&size=large&show_faces=true&share=true&height=80&appId" width="350" height="90" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      
+

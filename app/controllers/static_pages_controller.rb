@@ -1,4 +1,4 @@
 class StaticPagesController < ApplicationController
-  def impritn
+  def imprint
   end
 end

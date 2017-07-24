@@ -81,6 +81,19 @@ Rails.application.configure do
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
 
-  # Do not dump schema after migrations.
+
   config.active_record.dump_schema_after_migration = false
+  Rails.application.routes.default_url_options[:host] = 'limo-journal.de'
+  #mailer
+  config.action_mailer.default_url_options = { :host => 'limo-journal.de' }
+  ActionMailer::Base.smtp_settings = {
+  :address        => "smtp.sendgrid.net",
+  :port           => "25",
+  :authentication => :plain,
+  :user_name      => 'apikey',
+  :password       => ENV['SENDGRID_PASSWORD'],
+  :domain         => ENV['SENDGRID_DOMAIN']
+}
+
+
 end

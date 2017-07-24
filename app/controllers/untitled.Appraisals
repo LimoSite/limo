@@ -1,13 +1,11 @@
-class WelcomeController < ApplicationController
-
-  # main page
-  def index
+# GET /contacts/new
+  def new
     @welcome = Welcome.new
   end
 
 
-  # POST /welcomes
-  # POST /welcomes.json
+  # POST /contacts
+  # POST /contacts.json
   def create
     @contact = Contact.new(contact_params)
 
@@ -22,12 +20,12 @@ class WelcomeController < ApplicationController
     end
   end
 
+
+
   private
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_params
       params.require(:welcome).permit(:name, :email, :message)
     end
-
-
-end
