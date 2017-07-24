@@ -1,0 +1,31 @@
+%section#welcome-main
+  .container-fluid
+    .row.ran
+      .col-md-12
+        .frame
+          = image_tag 'logo-limo.jpg', class:"logo-welcome"
+        -#%header
+          %h1.limo
+            Limo
+            .divide
+            %small.sma
+              Gutschein Journal
+        -#.btn-c
+          = link_to 'Schreiben Sie uns', new_contact_path, class:"btn btn-success"
+= render 'st'
+%section#welcome-media
+  .container-fluid#mediadaten
+    .row
+      .col-md-12
+        %header
+          %h2.seli
+            Limo Journal
+            %span.thin
+              \-
+            %span.col
+              Mediadaten 2017
+        %p.info
+          Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in. Donec in blandit dolor. Vivamus a fringilla lorem, vel faucibus ante. Nunc ullamcorper, justo a iaculis elementum, enim orci viverra eros, fringilla porttitor lorem eros vel.
+        .data
+          <iframe width="100%" height="701px" src="https://www.yumpu.com/de/embed/view/vmG1N6HrlYVJyS59" frameborder="0" allowfullscreen="true"  allowtransparency="true"></iframe>
+-#

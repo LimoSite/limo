@@ -1,0 +1,32 @@
+<%= form_for(contact) do |f| %>
+  <% if contact.errors.any? %>
+    <div id="error_explanation">
+      <h4>Bitte schauen Sie sich folgende Punkte nochmals an: </h4>
+
+      <ul>
+      <% contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name , for:"name"%>
+    <%= f.text_field :name , class:"form-control", id:"name", type:"text", placeholder:"Name" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email , for:"email"%>
+    <%= f.text_field :email, class:"form-control", id:"email", type:"email", placeholder:"Email" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :nachricht , for:"msg"%>
+    <%= f.text_area :message, class:"form-control", id:"msg", type:"text", placeholder:"Nachricht", rows:"9"%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Senden", class:"btn btn-success" %>
+  </div>
+<% end %>
