@@ -1,10 +1,10 @@
-<%= form_for(contact) do |f| %>
-  <% if contact.errors.any? %>
+<%= form_for(@contact) do |f| %>
+  <% if @contact.errors.any? %>
     <div id="error_explanation">
       <h4>Bitte schauen Sie sich folgende Punkte nochmals an: </h4>
 
       <ul>
-      <% contact.errors.full_messages.each do |message| %>
+      <% @contact.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -12,21 +12,27 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :name , for:"name"%>
+    <%= f.label :name , for:"name" , class:"black nj"%>
     <%= f.text_field :name , class:"form-control", id:"name", type:"text", placeholder:"Name" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :email , for:"email"%>
+    <%= f.label :email , for:"email", class:"black nj"%>
     <%= f.text_field :email, class:"form-control", id:"email", type:"email", placeholder:"Email" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :nachricht , for:"msg"%>
+    <%= f.label :nachricht , for:"msg", class:"black nj"%>
     <%= f.text_area :message, class:"form-control", id:"msg", type:"text", placeholder:"Nachricht", rows:"9"%>
   </div>
 
+<div class="modal-footer">
   <div class="actions">
     <%= f.submit "Senden", class:"btn btn-success" %>
+      </div>
+
   </div>
+
+        
+
 <% end %>

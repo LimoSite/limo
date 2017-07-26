@@ -1,23 +1,28 @@
 %footer#footer
 	.container-fluid
 		.row
-			.col-md-6
-				Copyright 
-				&copy; 2017
-				= link_to 'Limo - Gutschein Journal', root_path, class:"foo-link"
-			.col-md-6
-				%ul.list-inline.right-list
-					%li.foo
-						=link_to 'Kontakt', new_contact_path, class:"foo-link"
-					%li.foo
-						=link_to 'Impressum', imprint_path, class:"foo-link"
-					%li.foo
-						|
-						&nbsp;
-						&nbsp;
-						&nbsp;
-						Folge uns auf Facebook: 
-						&nbsp;
-						%a.foo-link.fb{:href=>"https://www.facebook.com/Limo-Journal-1525454911048795/", :target=>"_blank"}
-							<i class="fa fa-facebook-square"></i>
-					
+			.col-md-8.col-md-offset-2.col-xs-12
+				.row
+					.col-md-6
+						Copyright 
+						&copy; 2017
+						= link_to 'Limo - Gutschein Journal', root_path, class:"foo-link"
+					.col-md-6
+						%ul.list-inline.right-list
+							%li.foo
+								%a{'data-target' => "#myModal", "data-toggle"=>"modal", :class=>"foo-link"}
+									Kontakt
+							%li.foo
+								=link_to 'Impressum', imprint_path, class:"foo-link"
+							%li.foo
+								|
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								Folge uns auf Facebook: 
+								&nbsp;
+								%a.foo-link.fb{:href=>"https://www.facebook.com/limojournal/", :target=>"_blank"}
+									<i class="fa fa-facebook-square"></i>
+
+= render 'shared/mo'
+							

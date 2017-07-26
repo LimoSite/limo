@@ -1,8 +1,9 @@
-class WelcomeController < ApplicationController
+class WelcomesController < ApplicationController
 
   # main page
   def index
     @welcome = Welcome.new
+    @contact = Contact.new
   end
 
 
@@ -13,11 +14,11 @@ class WelcomeController < ApplicationController
 
     respond_to do |format|
       if @welcome.save
-        format.html { redirect_to @welcome, notice: 'Vielen Dank für die Nachricht.' }
-        format.json { render :show, status: :created, location: @welcome }
+        format.html { redirect_to root_path, notice: 'Vielen Dank für die Nachricht.' }
+        #format.json { render :show, status: :created, location: @welcome }
       else
-        format.html { render :new }
-        format.json { render json: @welcome.errors, status: :unprocessable_entity }
+        format.html { render root_path}
+        #format.json { render json: @welcome.errors, status: :unprocessable_entity }
       end
     end
   end

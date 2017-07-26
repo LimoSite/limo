@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
   <head>
+    
     <title>Limo | Gutschein-Journal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
   </head>
 
   <body>
+  <!-- nav -->
     <%= render 'shared/nav' %>
     <%= render 'shared/flash' %>
     <%= yield %>
-
+ <!-- footer -->
     <%= render 'shared/footer' %>
 
   </body>
