@@ -1,6 +1,9 @@
 @media(max-width:767px){
   .shine{
-    background-color: #72c02c !important;
+    background-color: rgb(190,200,0) !important;
+  }
+  .lm-lg{
+    max-width: 250px;
   }
 }
 @media(min-width:768px){}
