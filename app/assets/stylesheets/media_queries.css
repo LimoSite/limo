@@ -5,6 +5,10 @@
   .lm-lg{
     max-width: 250px;
   }
+  .zener{
+    height: 50vh;
+  }
+
 }
 @media(min-width:768px){}
 @media(min-width:992px){}
